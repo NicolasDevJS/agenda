@@ -1,16 +1,14 @@
+// src/navigation/EmployeeTabs.jsx
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
-
 import Home from '@/screens/Home';
-import Dashboard from '@/screens/Dashboard';
-import Employees from '@/screens/Employees';
+import EmployeeSettings from '@/screens/EmployeeSettings';
 import { colors } from '@/theme';
-import Settings from '@/screens/Settings';
 
 const Tab = createBottomTabNavigator();
 
-export default function RootTabs() {
+export default function EmployeeTabs() {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -28,24 +26,8 @@ export default function RootTabs() {
       />
 
       <Tab.Screen
-        name="Dashboard"
-        component={Dashboard}
-        options={{
-          tabBarIcon: (p) => <Feather name="bar-chart-2" {...p} />,
-        }}
-      />
-
-      <Tab.Screen
-        name="Employees"
-        component={Employees}
-        options={{
-          tabBarIcon: (p) => <Feather name="users" {...p} />,
-        }}
-      />
-
-      <Tab.Screen
-        name="Settings"
-        component={Settings}
+        name="EmployeeSettings"
+        component={EmployeeSettings}
         options={{
           tabBarIcon: (p) => <Feather name="settings" {...p} />,
         }}

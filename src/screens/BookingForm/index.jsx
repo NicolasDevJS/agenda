@@ -58,15 +58,10 @@ export default function BookingForm({ route }) {
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'left', 'right']}>
       <ScrollView contentContainerStyle={styles.container}>
-        {/* seta voltar */}
         <TouchableOpacity style={styles.back} onPress={() => navigation.goBack()}>
           <Feather name="arrow-left" size={24} color={colors.primary} />
         </TouchableOpacity>
-
-        {/* título centralizado */}
         <Text style={styles.title}>{editing ? 'Editar agendamento' : 'Novo agendamento'}</Text>
-
-        {/* nome do estabelecimento centralizado */}
         <Text style={styles.est}>{est?.name || editing?.est}</Text>
 
         <Text style={styles.label}>Nome*</Text>
